@@ -10,6 +10,14 @@ body{
 .debug{
     border: 1px solid black;
 }
+.clearfix:after{
+    content: '';
+    display:table;
+    clear: both;
+}
+a{
+    text-decoration: none;
+}
 .wrapper{
     width: 100%;
     height: 100vh;
@@ -23,18 +31,19 @@ body{
     align-content: stretch;
 }
 aside{
-    width: 250px;
+    width: 200px;
     height: 100%;
     background-color: aqua;
 }
 .main-content{
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
     height: 100%;
     background-color: aquamarine;
     padding-top: 80px;
+    overflow-y: auto;
 }
 .nav-top{
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
     height: 80px;
     background-color: rgba(51, 51, 255, 0.6);
     position: fixed;
@@ -42,13 +51,17 @@ aside{
     top: 0;  
     display: flex;
     justify-content: flex-end;
+    align-items:center;
 }
 .button-upgrade{
-    width: 200px;
-    height: 60px;
+    width: 220px;
+    height: 40px;
     border: 1px solid white;
-    border-radius: 60%;
+    border-radius: 20%;
     text-align: center;
+    padding: 11px;
+    font-size: 13px;
+    margin-right: 10px;
 }
 footer{
     width: 100%;
@@ -57,4 +70,209 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+}
+.player{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+.foot-box{
+    width: calc(100% / 3);
+    height: 90px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.foot-box img{
+    width: 10%;
+    min-width: 43px;
+    height: auto;
+    margin-left: 10px;
+}
+.foot-name-song{
+    width: 8vw;
+    min-width: 100px;
+    border: 1px solid white;
+    padding-left: 17px;
+}
+#likensave{
+    width: 20%;
+}
+.foot-icons{
+    color: white;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.foot-box2{
+    width: calc(100% / 3);
+    min-width: 300px;
+    height: 90px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.player-icons{
+    font-size: 25px;
+    padding: 10px 10px;
+    padding-bottom: 3px;
+}
+
+.time-bar{
+    width: 3vw;
+    height: 10px;
+    background-color: greenyellow;
+    float: left;
+    font-size: 0;
+}
+#real-time{
+    width: 17vw;
+    background-color: gray;
+}
+.foot-box3{
+    width: calc(100% / 3);
+    min-width: 100px;
+    height: 90px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+.vol-bar{
+    width: 2vw;
+    height: 10px;
+    background-color: greenyellow;
+    font-size: 0;
+    
+}
+#real-vol{
+    width: 8vw;
+    background-color: gray;
+    height: 10px;
+    font-size: 0;
+    margin-right: 10px;
+}
+.vol-icons{
+    font-size: 15px;
+    padding: 10px 10px;
+    padding-bottom: 3px;
+}
+.rute-options{
+    width: 50%;
+    min-width: 390px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.brn-options{
+    padding: 5px 4px;
+}
+.recent-container{
+    width: calc(100% - 20px) ;
+    margin-left: 20px;
+}
+.recent-songs-container{
+    width:100%;
+    display: flex;
+    gap: 10px; 
+}
+.recent-songs{
+    width: 12vw;
+}
+.recent-songs img{
+    width: 12vw;
+}
+.recent-songs h3, .recent-songs h5{
+    text-align: center;
+    padding: 5px;
+}
+.popular{
+    border-radius: 50%;
+}
+#aside-container{
+    margin-left: 10px;
+}
+#lolgo-cont{
+    height: 80px;
+}
+#lolgo{
+    width: 150px;
+}
+.home-search-lib svg{
+    vertical-align: middle;
+}
+.home-search-lib svg{
+    width: 30px;
+}
+.home-search-lib span{
+    color: grey;
+}
+.utente{
+    position: absolute;
+    bottom: 90px;
+    left:0;
+}
+.utente svg{
+    width: 20px;
+}
+.lultente{
+}
+.lultente a{
+    font-size: 20px;
+    vertical-align: middle;
+}
+#user-icon{
+    width: 30px;
+    background-color: gray;
+    border-radius: 50%;
+}
+#newplaylist{
+    font-size: 50px;
+}
+#newspan{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#newplaylist{
+    font-size: 50px;
+}
+#playlist-ctn li{
+    padding: 5px 0;
+}
+#playlist-ctn li a{
+    text-decoration: none;
+    color: grey;
+}
+#playlistp{
+    padding: 10px 0;
+}
+#da1, #da2{
+    color: grey;
+}
+.color-grey{
+    color: grey;
+}
+
+
+#utente1-flex{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+#utente2-flex{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    font-size: 15px;
+    border-top: 1px solid grey;
+    padding-left: 10px;
 }
