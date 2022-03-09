@@ -23,6 +23,7 @@ body{
 }
 a{
     text-decoration: none;
+    color: white;
 }
 .wrapper{
     width: 100%;
@@ -184,6 +185,12 @@ footer{
 .brn-options{
     padding: 5px 4px;
 }
+.opt{
+    color: grey;
+}
+.opt:hover{
+    color: white;
+}
 .recent-container{
     width: calc(100% - 20px) ;
     margin-left: 20px;
@@ -195,9 +202,11 @@ footer{
 }
 .recent-songs{
     width: 12vw;
+    position: relative;
 }
 .recent-songs img{
     width: 12vw;
+    height: 22vh;
 }
 .recent-songs h3, .recent-songs h5{
     text-align: center;
@@ -205,6 +214,40 @@ footer{
 }
 .popular{
     border-radius: 50%;
+}
+.hover-box{
+    width: 12vw;
+    height: 22vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.hover-box2{
+    width: 12vw;
+    height: 22vh;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.hover-play{
+    height: 23vh;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recent-songs:hover .hover-box{
+    display: block;
+}
+.recent-songs:hover .hover-box2{
+    display: block;
 }
 #aside-container{
     margin-left: 10px;
@@ -293,4 +336,16 @@ footer{
 }
 #utente2-flex span{
     padding-left: 10px;
+}
+.home-search-lib span:hover{
+    color: white;
+}
+#newspan:hover #da1,#newspan:hover #da2{
+    color: white;
+}
+#playlist-ctn li:hover a{
+    color: white;
+}
+#utente1-flex span:hover{
+    color: white;
 }
