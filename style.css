@@ -41,6 +41,15 @@ aside{
     height: 100%;
     background-color: black;
 }
+#playlist-container{
+    overflow-y: scroll;
+    width: 190px;
+    height: 32vh;
+    min-height: 150px;
+}
+.utente{
+    background-color: black;
+}
 .main-content{
     width: calc(100% - 200px);
     height: 100%;
@@ -92,8 +101,8 @@ footer{
 }
 .foot-box{
     width: calc(100% / 3);
+    min-width: 162px;
     height: 90px;
-    border: 1px solid white;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -115,12 +124,12 @@ footer{
 }
 .foot-name-song{
     width: 8vw;
-    min-width: 100px;
-    border: 1px solid white;
+    min-width: 75px;
     padding-left: 17px;
 }
 #likensave{
     width: 20%;
+    min-width: 27px;
 }
 #like, #save{
     color: grey;
@@ -139,7 +148,6 @@ footer{
     width: calc(100% / 3);
     min-width: 300px;
     height: 90px;
-    border: 1px solid white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -161,8 +169,25 @@ footer{
 }
 #timing-song {
     width: 25vw;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
 }
-
+.point-bar{
+    display: none;
+}
+#timing-song:hover .point-bar{
+    display: block;
+}
+#timing-song:hover #lastid{
+    background-color: yellowgreen;
+}
+#volum:hover .point-bar{
+    display: block;
+}
+#volum:hover .vol-bar{
+    background-color: yellowgreen;
+}
 .time-bar{
     width: 3vw;
     height: 3px;
@@ -182,13 +207,16 @@ footer{
     width: calc(100% / 3);
     min-width: 100px;
     height: 90px;
-    border: 1px solid white;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 
     flex-wrap: wrap;
+}
+#volum{
+    display: flex;
+    align-items: center;
 }
 .vol-bar{
     width: 2vw;
@@ -203,7 +231,7 @@ footer{
     height: 10px;
     background-color: white;
     border-radius: 50%;
-    display: inline-block;
+    
 }
 #real-vol{
     width: 8vw;
@@ -223,11 +251,23 @@ footer{
 }
 .rute-options{
     width: 50%;
-    min-width: 390px;
+    min-width: 320px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
+}
+.green-select{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.green-table{
+    width: 30px;
+    height: 3px;
+    background-color: green;
 }
 .brn-options{
     padding: 5px 4px;
@@ -245,25 +285,41 @@ footer{
 .recent-songs-container{
     width:100%;
     display: flex;
-    gap: 10px; 
+    flex-wrap: wrap;
+    gap: 1.5vw; 
 }
 .recent-songs{
     width: 12vw;
     position: relative;
+    min-width: 150px;
 }
 .recent-songs img{
     width: 12vw;
     height: 22vh;
+    min-width: 150px
 }
 .recent-songs h3, .recent-songs h5{
     text-align: center;
     padding: 5px;
+}
+.recent-songs h5{
+    color: gray;
+    font-size: 13px;
+}
+.recent-container p{
+    font-size: 15px;
+    color: gray;
+    padding: 10px 0 10px 0;
+}
+.recent-container h1{
+    padding: 10px 0 10px 0;
 }
 .popular{
     border-radius: 50%;
 }
 .hover-box{
     width: 12vw;
+    min-width: 150px;
     height: 22vh;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;
@@ -274,6 +330,7 @@ footer{
 }
 .hover-box2{
     width: 12vw;
+    min-width: 150px;
     height: 22vh;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -299,11 +356,18 @@ footer{
 #aside-container{
     margin-left: 10px;
 }
+#homie{
+    border-left: 3px solid green;
+}
 #lolgo-cont{
     height: 80px;
 }
 #lolgo{
     width: 150px;
+}
+#lulgo{
+    width: 35px;
+    display: none;
 }
 .home-search-lib svg{
     vertical-align: middle;
@@ -321,8 +385,6 @@ footer{
 }
 .utente svg{
     width: 20px;
-}
-.lultente{
 }
 .lultente a{
     font-size: 20px;

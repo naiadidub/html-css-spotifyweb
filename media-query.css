@@ -1,0 +1,45 @@
+@media screen and (max-width: 683px){
+    .foot-box3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px)  {
+    .rute-options{
+        min-width: 210px;
+    }
+    
+  }
+
+@media screen and (max-width: 425px)  {
+    #lolgo{
+        display: none;
+    }
+    #lulgo{
+        display: inline;
+    }
+    .home-search-lib span{
+        display: none;
+    }
+    #playlist-container{
+        display: none;
+    }
+    .install-app span{
+        display: none;
+    }
+    #utente2-flex{
+        border-top: 0px;
+    }
+    aside{
+        width: 50px;
+    }
+    .main-content{
+        width: calc(100% - 50px);
+    }
+    .nav-top{
+        width: calc(100% - 50px);
+    }
+    .rute-options{
+        min-width: 320px;
+    }
+  }
