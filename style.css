@@ -42,7 +42,7 @@ aside{
     background-color: black;
 }
 #playlist-container{
-    overflow-y: scroll;
+    overflow-y: hidden;
     width: 190px;
     height: 32vh;
     min-height: 150px;

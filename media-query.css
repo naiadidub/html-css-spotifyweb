@@ -43,3 +43,8 @@
         min-width: 320px;
     }
   }
+@media screen and (max-height: 570px){
+    #playlist-container{
+        overflow-y: scroll;
+    }
+}
