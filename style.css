@@ -292,11 +292,13 @@ footer{
     width: 12vw;
     position: relative;
     min-width: 150px;
+    min-height: 280px;
 }
 .recent-songs img{
     width: 12vw;
     height: 22vh;
-    min-width: 150px
+    min-width: 150px;
+    min-height: 183px;
 }
 .recent-songs h3, .recent-songs h5{
     text-align: center;
